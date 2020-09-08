@@ -1,0 +1,26 @@
+﻿@page
+@model NAA.Client.Pages.Fleet.IndexModel
+@{
+}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Registration</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var i in Model.AirplaneIndexViewModel.Entities)
+    {
+        <tr>
+            <td>@i.Id</td>
+            <td>@i.Manufacturer</td>
+            <td>@i.Model</td>
+            <td>@i.Registration</td>
+        </tr>
+    }
+    </tbody>
+</table>
